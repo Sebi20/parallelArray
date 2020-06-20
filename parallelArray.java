@@ -13,13 +13,16 @@ public class parallelArray{
 		double [] balance = new double[MAX];
 		int size;
 		
-		size = readData(name, balance, input);
+		size = readData(name, balance, input);// Fills in the arrays and initializes the size
 		printArray(name, balance, size, output);
 		
+		//Printing the binary sort of the balances
 		output.println("--------------------");
-		output.println("Sorted numerically using Bubble sort:\n");
+		output.println("Sorted numerically using Binary sort:\n");
 		bubSort(name, balance, size);
 		printArray(name, balance, size, output);
+		
+		//Printing the selection sort of the names
 		output.println("--------------------");
 		output.println("Sorted alphabetically using Selection sort:\n");
 		selectSort(name, balance, size);
@@ -27,34 +30,36 @@ public class parallelArray{
 		
 		
 		
-		input.close();
+		input.close();// closes the Scanner class
 	}// End of the main method
 	
 	public static int readData(String [] name, double [] balance, Scanner input) {
-		int cnt;
+		int cnt;// Initializes the count
 		
 		for (cnt = 0; input.hasNext(); cnt++) {
-			name[cnt] = input.next();
-			balance[cnt] = input.nextDouble();
+			name[cnt] = input.next();// Fills the array with the names
+			balance[cnt] = input.nextDouble(); // Takes all the double values
 			
 		}// End of the for loop
 		
-		return cnt;
+		return cnt;// returns the count of the lines
 	}// End of the readData method
 	
 	public static void bubSort(String [] name, double [] balance, int size) {
-		double temp1;
-		String temp2;
+		double temp1;// Temporary index for the balance
+		String temp2;// Temporary index for the names
+		
 		boolean swapped;
+		
 		do {
-			swapped = false;
+			swapped = false; // initializes the boolean
 			
 			for (int i = 0; i < size - 1; i++) {
 				if(balance[i] > balance[i + 1]) {
 					
 					temp1 = balance[i];
 					balance[i] = balance[i + 1];
-					balance[i + 1] = temp1;
+					balance[i + 1] = temp1; 
 					swapped = true;
 					
 					temp2 = name[i];
