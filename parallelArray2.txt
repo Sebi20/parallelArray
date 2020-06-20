@@ -1,0 +1,24 @@
+Sebastian	11234.9
+Shumona	3210.23
+Nancy	1230744.89
+Ebonie	3214.43
+Zelian	8902.67
+Javon	8912.12
+--------------------
+Sorted numerically using Bubble sort:
+
+Shumona	3210.23
+Ebonie	3214.43
+Zelian	8902.67
+Javon	8912.12
+Sebastian	11234.9
+Nancy	1230744.89
+--------------------
+Sorted alphabetically using Selection sort:
+
+Ebonie	3214.43
+Javon	8912.12
+Nancy	1230744.89
+Sebastian	11234.9
+Shumona	3210.23
+Zelian	8902.67
